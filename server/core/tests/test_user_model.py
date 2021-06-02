@@ -7,11 +7,11 @@ class UserModelTest(TestCase) :
   """Testing user Model"""
   def test_can_create_a_user(self):
     """create user with userName , email , password"""
-    user_name = 'merhan'
+    username = 'merhan'
     email = 'mehran@mehran.com'
     password = '1231456'
-    user = get_user_model().objects.create(
-      user_name = user_name,
+    user = get_user_model().objects.create_user(
+      username = username,
       email=email,
       password=password,
     )
